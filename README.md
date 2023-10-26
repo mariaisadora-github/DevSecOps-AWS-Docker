@@ -214,3 +214,25 @@ Para criar o modelo de execução deve-se seguir o seguinte passo
   + `EBS: 8GB GP2`
 + Detalhes avançados
   + Adiciona o [Userdata.sh](https://github.com/mariaisadora-github/DevSecOps-AWS-Docker/blob/main/Userdata.sh)
++ Clica em criar modelo de execução
+
+## Criação do Auto Scaling
+
++ Em EC2, no lado esquerdo, clique em "Grupos de Auto Scaling"
++ Clique em "Criar grupo de Auto Scaling"
++ Dê um nome para o mesmo
++ Adicione o modelo de execução criado anteriormente
++ Clique em Próximo
++ Adicione a VPC que está sendo usada durante toda a atividade
++ Em "Zonas de Disponibilidade e subnets" adicione todas as subnets privadas
++ Clique em "Anexar a um balanceador de carga existente"
++ Posteriormente adicione o grupo de destino criado anteriormente
++ Em verificações de integridade coloque 150 segundos
++ Clique em Próximo
++ Em "Tamanho do grupo" ficou da seguinte forma:  
+  + `Capacidade desejada: 2`
+  + `Capacidade mínima: 2`
+  + `Capacidade máxima: 4`
++ Clique em Próximo até aparecer o botão "Criar grupom de Auto Scaling", quando aparecer, clique no mesmo.
+
+Assim as instâncias irão subir com o userdata que foi adicionado, para verificar se está funcionando adiciona no browser o DNS do Load Balancer.
