@@ -160,3 +160,39 @@ Inicialmente será criado o grupo de destino e posteriormente o load balancer.
   <img src="/images/LB.png" alt="Load balancer" width="850px">
    <p><em>Aplication Load Balancer </em></p>
 </div>
+
+# Configuração do RDS
+
+O RDS será responsável por armazenar os arquivos do container Wordpress, para a criação foram seguidos os seguintes pontos:
+
++ Pesquise pelo serviço RDS e vá em "criar banco de dados"
++ Escolha o método de criação:
+  + `Criação Padrão`
++ Escolha o mecanismo:
+  + `MySQL`
++ Escolha o modelo:
+  + `Nível gratuito`
++ Configurações:
+  + `Nome do banco`
+  + `Credenciais`
+    + `username`
+    + `senha`
++ Conectividade:
+  + `VPC: criada anteriormente`
+  + `Security group: SG-RDS`
+    + `username`
+    + `senha`
++ Configuração adicional:
+  + `Nome: escolha o nome que preferir`
++ Clique em Criar banco de dados.
+
+# Configuração do EFS
+
+O EFS irá armazenar os arquivos estáticos do WordPress. Para criar o EFS deve-se seguir os seguintes passos:
+
++ Pesquise pelo serviço EFS e vá em "criar sistemas de arquivos"
++ Dê um nome.
++ Selecione a VPC que tem sido utilizada durante a atividade.
++ Clique em personalizar e posteriormente em próximo.
++ Nos grupos de segurança, adicione o SG-EFS
++ Clique em próximo e clique em criar.
