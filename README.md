@@ -86,7 +86,7 @@ Após criar as tabelas de rotas e associar as subnets a elas, deve-se criar os G
    <p><em>Mapa da VPC </em></p>
 </div>
 
-## Configuração dos Security Groups
+# Configuração dos Security Groups
 
 Configurei quatro grupos de segurança, sendo eles:
 
@@ -119,3 +119,44 @@ As portas de entrada estão configuradas da seguinte forma:
    Porta | Tipo | Protocolo | Origem
    --- | --- | --- | ---
    2209  | NFS | TCP | SG-Private
+
+# Configuração do Elastic Load Balancer
+
+Navegue até o serviço EC2.
+
+Inicialmente será criado o grupo de destino e posteriormente o load balancer.
+
+## Grupo de Destino
+
++ Criação do grupo de destino
+    + `Tipo: instância`
+    + `Nome: GD-ativ02`
+    + `VPC: VPC criada anteriormente`
+    + `Protocolo: http`
+
+<div align="center">
+  <img src="/images/GD.png" alt="Grupo de destino" width="850px">
+   <p><em>Grupo de Destino </em></p>
+</div>
+
+## Load Balancer
+
++ Foi criado um Aplication Load Balancer, o mesmo tem a seguinte criação:
+  + `Nome: LB-ativ02`
+  + `Esquema: voltado pra internet`
+  + `Tipo de endereço IP: IPv4`
+  + `VPC: VPC criada anteriormente`
+  + `Mapeamento:`
+    + `us-east-1a`
+    + `us-east-1b`
+    + `us-east-1c`
+  + `Grupo de segurança: SG-Public`
+  + `Listeners:`
+        Protocolo | Porta | Ação padrão
+        ---       | ---   | ---
+        http      | 80    | GD-ativ02
+
+<div align="center">
+  <img src="/images/LB.png" alt="Load balancer" width="850px">
+   <p><em>Aplication Load Balancer </em></p>
+</div>
