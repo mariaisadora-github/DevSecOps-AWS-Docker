@@ -196,3 +196,21 @@ O EFS irá armazenar os arquivos estáticos do WordPress. Para criar o EFS deve-
 + Clique em personalizar e posteriormente em próximo.
 + Nos grupos de segurança, adicione o SG-EFS
 + Clique em próximo e clique em criar.
+
+# Configuração do Auto Scaling
+
+## Modelo de Execução
+
+Para criar o modelo de execução deve-se seguir o seguinte passo
+
++ Adicionar um nome do modelo e a descição do mesmo
++ Adicionar configuração da instância:
+  + `AMI: Amazon Linux 2`
+  + `VPC: VPC que está sendo utilizada`
+  + `Sub-rede:  Não Incluir no Modelo de execução`
+  + `Tipo da instância: t3.small`
+  + `par de chaves: chave-atividade`
+  + `Grupo de segurança: SG-Private`
+  + `EBS: 8GB GP2`
++ Detalhes avançados
+  + Adiciona o [Userdata.sh]()
