@@ -83,5 +83,42 @@ Após criar as tabelas de rotas e associar as subnets a elas, deve-se criar os G
 
 <div align="center">
   <img src="/images/VPC.png" alt="VPC" width="850px">
-   <p><em>Resource Map da VPC </em></p>
+   <p><em>Mapa da VPC </em></p>
 </div>
+
+## Configuração dos Security Groups
+
+Configurei quatro grupos de segurança, sendo eles:
+
+<div align="center">
+  <img src="/images/SG.png" alt="security groups" width="850px">
+   <p><em>Security Groups </em></p>
+</div>
+
+As portas de entrada estão configuradas da seguinte forma: 
+
++ `Um grupo de segurança para o bastion host e o ELB - SG-Public`
+   Porta | Tipo | Protocolo | Origem
+   --- | --- | --- | ---
+   80  | HTTP | TCP | 0.0.0.0/0
+   --- | --- | --- | ---
+   tudo  | ICMP | ICMP | 0.0.0.0/0
+   --- | --- | --- | ---
+   22  | SSH | TCP | 0.0.0.0/0
+
++ `Um grupo de segurança para as instâncias - SG-Private`
+   Porta | Tipo | Protocolo | Origem
+   --- | --- | --- | ---
+   80  | HTTP | TCP | SG-Public
+   --- | --- | --- | ---
+   22  | SSH | TCP | SG-Public
+
++ `Um grupo de segurança para o RDS - SG_RDS`
+   Porta | Tipo | Protocolo | Origem
+   --- | --- | --- | ---
+   3306  | MYSQL/Aurora | TCP | SG-Private
+
++ `Um grupo de segurança para o EFS`
+   Porta | Tipo | Protocolo | Origem
+   --- | --- | --- | ---
+   2209  | NFS | TCP | SG-Private
