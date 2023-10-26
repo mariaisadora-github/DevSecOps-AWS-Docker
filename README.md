@@ -152,9 +152,9 @@ Inicialmente será criado o grupo de destino e posteriormente o load balancer.
     + `us-east-1c`
   + `Grupo de segurança: SG-Public`
   + `Listeners:`
-        Protocolo | Porta | Ação padrão
-        ---       | ---   | ---
-        http      | 80    | GD-ativ02
+    + `Protocolo: http`
+    + `Porta: 80`
+    + `Ação Padrão: GD-ativ02`
 
 <div align="center">
   <img src="/images/LB.png" alt="Load balancer" width="850px">
