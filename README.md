@@ -26,6 +26,8 @@ Atividade realizada por: [Maria Isadora](https://github.com/mariaisadora-github)
 
 # Configuração da VPC
 
++ Acesse o console da AWS e entre na sua conta, no painel de controle, clique em "Services" e selecione "VPC".
+
 
 
 
