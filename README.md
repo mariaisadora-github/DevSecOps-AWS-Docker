@@ -32,23 +32,19 @@ Atividade realizada por: [Maria Isadora](https://github.com/mariaisadora-github)
   + No caso, eu criei três subnets privadas e três subnets públicas. Sendo uma pública e uma privada em cada zona de disponiblidade. Então ficou da seguinte forma:
     + Subnets Privadas
       + `Nome: subnet-ativ02-private1`
-      + `Zona de disponibilidade: us-east-1a`
-
+        + `Zona de disponibilidade: us-east-1a`
       + `Nome: subnet-ativ02-private2`
-      + `Zona de disponibilidade: us-east-1b`
-
+        + `Zona de disponibilidade: us-east-1b`
       + `Nome: subnet-ativ02-private3`
-      + `Zona de disponibilidade: us-east-1c`
+        + `Zona de disponibilidade: us-east-1c`
 
     + Subnets Públicas
       + `Nome: subnet-ativ02-public1`
-      + `Zona de disponibilidade: us-east-1a`
-
+        + `Zona de disponibilidade: us-east-1a`
       + `Nome: subnet-ativ02-public2`
-      + `Zona de disponibilidade: us-east-1b`
-
+        + `Zona de disponibilidade: us-east-1b`
       + `Nome: subnet-ativ02-public3`
-      + `Zona de disponibilidade: us-east-1c`
+        + `Zona de disponibilidade: us-east-1c`
 
 
 
