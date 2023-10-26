@@ -79,3 +79,9 @@ Após criar as tabelas de rotas e associar as subnets a elas, deve-se criar os G
      0.0.0.0/0 | Nat gateway
 
 
+## O mapeamento da minha VPC
+
+<div align="center">
+  <img src="/images/VPC.png" alt="VPC" width="850px">
+   <p><em>Resource Map da VPC </em></p>
+</div>
