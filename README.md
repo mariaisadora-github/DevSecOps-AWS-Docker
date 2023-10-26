@@ -27,8 +27,28 @@ Atividade realizada por: [Maria Isadora](https://github.com/mariaisadora-github)
 # Configuração da VPC
 
 + Acesse o console da AWS e entre na sua conta, no painel de controle, clique em "Services" e selecione "VPC".
++ No painel de Navegação do lado esquerdo, clique em "Your VPCs", feito isso, clique em criar VPC.
++ Após criar a VPC, no painel de navegação, vá em "Subnets" e crie ao menos duas em pelo ou menos duas zonas distintas.
+  + No caso, eu criei três subnets privadas e três subnets públicas. Sendo uma pública e uma privada em cada zona de disponiblidade. Então ficou da seguinte forma:
+    + Subnets Privadas
+      + `Nome: subnet-ativ02-private1`
+      + `Zona de disponibilidade: us-east-1a`
 
+      + `Nome: subnet-ativ02-private2`
+      + `Zona de disponibilidade: us-east-1b`
 
+      + `Nome: subnet-ativ02-private3`
+      + `Zona de disponibilidade: us-east-1c`
+
+    + Subnets Públicas
+      + `Nome: subnet-ativ02-public1`
+      + `Zona de disponibilidade: us-east-1a`
+
+      + `Nome: subnet-ativ02-public2`
+      + `Zona de disponibilidade: us-east-1b`
+
+      + `Nome: subnet-ativ02-public3`
+      + `Zona de disponibilidade: us-east-1c`
 
 
 
