@@ -99,13 +99,18 @@ As portas de entrada estão configuradas da seguinte forma:
 
 + `Um grupo de segurança para o bastion host e o ELB - SG-Public`
    Porta | Tipo | Protocolo | Origem
+   --- | --- | --- | ---
    80  | HTTP | TCP | 0.0.0.0/0
+   --- | --- | --- | ---
    tudo  | ICMP | ICMP | 0.0.0.0/0
+   --- | --- | --- | ---
    22  | SSH | TCP | 0.0.0.0/0
 
 + `Um grupo de segurança para as instâncias - SG-Private`
    Porta | Tipo | Protocolo | Origem
+   --- | --- | --- | ---
    80  | HTTP | TCP | SG-Public
+   --- | --- | --- | ---
    22  | SSH | TCP | SG-Public
 
 + `Um grupo de segurança para o RDS - SG_RDS`
