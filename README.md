@@ -186,6 +186,11 @@ O RDS será responsável por armazenar os arquivos do container Wordpress, para 
   + `Nome: escolha o nome que preferir`
 + Clique em Criar banco de dados.
 
+<div align="center">
+  <img src="/images/RDS.png" alt="RDS" width="850px">
+   <p><em>Database </em></p>
+</div>
+
 # Configuração do EFS
 
 O EFS irá armazenar os arquivos estáticos do WordPress. Para criar o EFS deve-se seguir os seguintes passos:
@@ -196,6 +201,11 @@ O EFS irá armazenar os arquivos estáticos do WordPress. Para criar o EFS deve-
 + Clique em personalizar e posteriormente em próximo.
 + Nos grupos de segurança, adicione o SG-EFS
 + Clique em próximo e clique em criar.
+
+<div align="center">
+  <img src="/images/EFS.png" alt="EFS" width="850px">
+   <p><em>EFS </em></p>
+</div>
 
 # Configuração do Auto Scaling
 
