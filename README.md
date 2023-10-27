@@ -252,6 +252,6 @@ Assim as instâncias irão subir com o userdata que foi adicionado, para verific
 ## Wordpress
 
 <div align="center">
-  <img src="/images/WORDPRESS.png" alt="wordpress" width="850px">
+  <img src="/images/WORDPRESS.png" alt="wordpress" width="300px">
    <p><em>Wordpress </em></p>
 </div>
