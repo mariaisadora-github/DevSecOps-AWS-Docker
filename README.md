@@ -191,7 +191,7 @@ O RDS será responsável por armazenar os arquivos do container Wordpress, para 
    <p><em>Database </em></p>
 </div>
 
-# Configuração do EFS
+# Configuração do Elastic File System
 
 O EFS irá armazenar os arquivos estáticos do WordPress. Para criar o EFS deve-se seguir os seguintes passos:
 
@@ -251,7 +251,27 @@ Assim as instâncias irão subir com o userdata que foi adicionado, para verific
 
 ## Wordpress
 
+Para testar o wordpress eu o acessei pelo DNS do Load Balancer que foi criado.
+
 <div align="center">
   <img src="/images/WORDPRESS.png" alt="wordpress" width="300px">
    <p><em>Wordpress </em></p>
+</div>
+
+## EFS
+
+Para testar o EFS eu primeiro entrei no Bastion Host, para depois entrar nas instâncias privadas.
+
+Na imagem a seguir é possível ver que eu entrei em uma das instâncias e em seguida entrei no diretório compartilhado e criei um arquivo .txt
+
+<div align="center">
+  <img src="/images/I1.png" alt="Instância 1" width="850px">
+   <p><em>Instância em que foi criado o .txt </em></p>
+</div>
+
+Já na imagem a seguir pode ser visualizado a segunda e instância e quando eu entro no diretório compartilhado e listo os arquivos, o .txt criado anteriormente está presente no diretório compartilhado.
+
+<div align="center">
+  <img src="/images/I2.png" alt="Instância 2" width="850px">
+   <p><em>Instância em que foi possível ver o EFS funcionando </em></p>
 </div>
