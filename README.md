@@ -246,3 +246,12 @@ Para criar o modelo de execução deve-se seguir o seguinte passo
 + Clique em Próximo até aparecer o botão "Criar grupom de Auto Scaling", quando aparecer, clique no mesmo.
 
 Assim as instâncias irão subir com o userdata que foi adicionado, para verificar se está funcionando adiciona no browser o DNS do Load Balancer.
+
+# Teste
+
+## Wordpress
+
+<div align="center">
+  <img src="/images/WORDPRESS.png" alt="wordpress" width="850px">
+   <p><em>Wordpress </em></p>
+</div>
